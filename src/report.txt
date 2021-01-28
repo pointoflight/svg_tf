@@ -1,0 +1,38 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: learn.py
+--------------------------------------------------------------------------------
+learn.py:136:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'learn.py'
+ outputting to 'learn_v2.py'
+--------------------------------------------------------------------------------
+
+70:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+81:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+82:13: INFO: Added keywords to args of function 'tf.cond'
+83:16: INFO: Added keywords to args of function 'tf.cond'
+87:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+90:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+90:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+92:21: INFO: Added keywords to args of function 'tf.reduce_mean'
+93:23: INFO: Added keywords to args of function 'tf.reduce_mean'
+97:17: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+99:16: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+100:20: INFO: Renamed 'tf.GPUOptions' to 'tf.compat.v1.GPUOptions'
+105:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+106:13: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+107:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+107:27: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+136:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
