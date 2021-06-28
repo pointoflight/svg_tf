@@ -18,8 +18,3 @@ $ python ../src/learn.py
   (It may take several minutes to download moving MNIST dataset for the first time)
 $ python ../src/generate.py
 ```
-
-### Following must be taken into consideration
-- Reconstruction error (mse? cross entropy?)
-- Beta (the balance between reconstruction and regularization)
-- Encoder and decoder (end-to-end? importing pretrained model?)
